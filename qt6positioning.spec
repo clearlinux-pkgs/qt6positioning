@@ -4,13 +4,13 @@
 # Using build pattern: cmake
 #
 Name     : qt6positioning
-Version  : 6.5.3
-Release  : 1
-URL      : https://download.qt.io/official_releases/qt/6.5/6.5.3/submodules/qtpositioning-everywhere-src-6.5.3.tar.xz
-Source0  : https://download.qt.io/official_releases/qt/6.5/6.5.3/submodules/qtpositioning-everywhere-src-6.5.3.tar.xz
+Version  : 6.6.0
+Release  : 2
+URL      : https://download.qt.io/official_releases/qt/6.6/6.6.0/submodules/qtpositioning-everywhere-src-6.6.0.tar.xz
+Source0  : https://download.qt.io/official_releases/qt/6.6/6.6.0/submodules/qtpositioning-everywhere-src-6.6.0.tar.xz
 Summary  : No detailed summary available
 Group    : Development/Tools
-License  : BSD-3-Clause BSL-1.0 CC0-1.0 GFDL-1.3 GPL-2.0 GPL-3.0 LGPL-3.0 MIT
+License  : Apache-2.0 BSD-3-Clause BSL-1.0 CC0-1.0 GFDL-1.3 GPL-2.0 GPL-3.0 LGPL-3.0 MIT
 Requires: qt6positioning-lib = %{version}-%{release}
 Requires: qt6positioning-license = %{version}-%{release}
 BuildRequires : buildreq-cmake
@@ -56,15 +56,15 @@ license components for the qt6positioning package.
 
 
 %prep
-%setup -q -n qtpositioning-everywhere-src-6.5.3
-cd %{_builddir}/qtpositioning-everywhere-src-6.5.3
+%setup -q -n qtpositioning-everywhere-src-6.6.0
+cd %{_builddir}/qtpositioning-everywhere-src-6.6.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1696289744
+export SOURCE_DATE_EPOCH=1697148274
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -100,9 +100,10 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1696289744
+export SOURCE_DATE_EPOCH=1697148274
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/qt6positioning
+cp %{_builddir}/qtpositioning-everywhere-src-%{version}/LICENSES/Apache-2.0.txt %{buildroot}/usr/share/package-licenses/qt6positioning/2b8b815229aa8a61e483fb4ba0588b8b6c491890 || :
 cp %{_builddir}/qtpositioning-everywhere-src-%{version}/LICENSES/BSD-3-Clause.txt %{buildroot}/usr/share/package-licenses/qt6positioning/b073f11f0c81a95ab5e32aa6b5d23a5955a95274 || :
 cp %{_builddir}/qtpositioning-everywhere-src-%{version}/LICENSES/CC0-1.0.txt %{buildroot}/usr/share/package-licenses/qt6positioning/82da472f6d00dc5f0a651f33ebb320aa9c7b08d0 || :
 cp %{_builddir}/qtpositioning-everywhere-src-%{version}/LICENSES/GFDL-1.3-no-invariants-only.txt %{buildroot}/usr/share/package-licenses/qt6positioning/715f995f11805ee85601834220c43b082f457ea3 || :
@@ -125,30 +126,30 @@ popd
 
 %files dev
 %defattr(-,root,root,-)
-/usr/include/QtPositioning/6.5.3/QtPositioning/private/qclipperutils_p.h
-/usr/include/QtPositioning/6.5.3/QtPositioning/private/qdoublematrix4x4_p.h
-/usr/include/QtPositioning/6.5.3/QtPositioning/private/qdoublevector2d_p.h
-/usr/include/QtPositioning/6.5.3/QtPositioning/private/qdoublevector3d_p.h
-/usr/include/QtPositioning/6.5.3/QtPositioning/private/qgeoaddress_p.h
-/usr/include/QtPositioning/6.5.3/QtPositioning/private/qgeocircle_p.h
-/usr/include/QtPositioning/6.5.3/QtPositioning/private/qgeocoordinate_p.h
-/usr/include/QtPositioning/6.5.3/QtPositioning/private/qgeocoordinateobject_p.h
-/usr/include/QtPositioning/6.5.3/QtPositioning/private/qgeolocation_p.h
-/usr/include/QtPositioning/6.5.3/QtPositioning/private/qgeopath_p.h
-/usr/include/QtPositioning/6.5.3/QtPositioning/private/qgeopolygon_p.h
-/usr/include/QtPositioning/6.5.3/QtPositioning/private/qgeopositioninfo_p.h
-/usr/include/QtPositioning/6.5.3/QtPositioning/private/qgeopositioninfosource_p.h
-/usr/include/QtPositioning/6.5.3/QtPositioning/private/qgeorectangle_p.h
-/usr/include/QtPositioning/6.5.3/QtPositioning/private/qgeosatelliteinfo_p.h
-/usr/include/QtPositioning/6.5.3/QtPositioning/private/qgeosatelliteinfosource_p.h
-/usr/include/QtPositioning/6.5.3/QtPositioning/private/qgeoshape_p.h
-/usr/include/QtPositioning/6.5.3/QtPositioning/private/qlocationutils_p.h
-/usr/include/QtPositioning/6.5.3/QtPositioning/private/qnmeapositioninfosource_p.h
-/usr/include/QtPositioning/6.5.3/QtPositioning/private/qnmeasatelliteinfosource_p.h
-/usr/include/QtPositioning/6.5.3/QtPositioning/private/qpositioningglobal_p.h
-/usr/include/QtPositioning/6.5.3/QtPositioning/private/qtpositioning-config_p.h
-/usr/include/QtPositioning/6.5.3/QtPositioning/private/qtpositioningexports_p.h
-/usr/include/QtPositioning/6.5.3/QtPositioning/private/qwebmercator_p.h
+/usr/include/QtPositioning/6.6.0/QtPositioning/private/qclipperutils_p.h
+/usr/include/QtPositioning/6.6.0/QtPositioning/private/qdoublematrix4x4_p.h
+/usr/include/QtPositioning/6.6.0/QtPositioning/private/qdoublevector2d_p.h
+/usr/include/QtPositioning/6.6.0/QtPositioning/private/qdoublevector3d_p.h
+/usr/include/QtPositioning/6.6.0/QtPositioning/private/qgeoaddress_p.h
+/usr/include/QtPositioning/6.6.0/QtPositioning/private/qgeocircle_p.h
+/usr/include/QtPositioning/6.6.0/QtPositioning/private/qgeocoordinate_p.h
+/usr/include/QtPositioning/6.6.0/QtPositioning/private/qgeocoordinateobject_p.h
+/usr/include/QtPositioning/6.6.0/QtPositioning/private/qgeolocation_p.h
+/usr/include/QtPositioning/6.6.0/QtPositioning/private/qgeopath_p.h
+/usr/include/QtPositioning/6.6.0/QtPositioning/private/qgeopolygon_p.h
+/usr/include/QtPositioning/6.6.0/QtPositioning/private/qgeopositioninfo_p.h
+/usr/include/QtPositioning/6.6.0/QtPositioning/private/qgeopositioninfosource_p.h
+/usr/include/QtPositioning/6.6.0/QtPositioning/private/qgeorectangle_p.h
+/usr/include/QtPositioning/6.6.0/QtPositioning/private/qgeosatelliteinfo_p.h
+/usr/include/QtPositioning/6.6.0/QtPositioning/private/qgeosatelliteinfosource_p.h
+/usr/include/QtPositioning/6.6.0/QtPositioning/private/qgeoshape_p.h
+/usr/include/QtPositioning/6.6.0/QtPositioning/private/qlocationutils_p.h
+/usr/include/QtPositioning/6.6.0/QtPositioning/private/qnmeapositioninfosource_p.h
+/usr/include/QtPositioning/6.6.0/QtPositioning/private/qnmeasatelliteinfosource_p.h
+/usr/include/QtPositioning/6.6.0/QtPositioning/private/qpositioningglobal_p.h
+/usr/include/QtPositioning/6.6.0/QtPositioning/private/qtpositioning-config_p.h
+/usr/include/QtPositioning/6.6.0/QtPositioning/private/qtpositioningexports_p.h
+/usr/include/QtPositioning/6.6.0/QtPositioning/private/qwebmercator_p.h
 /usr/include/QtPositioning/QGeoAddress
 /usr/include/QtPositioning/QGeoAreaMonitorInfo
 /usr/include/QtPositioning/QGeoAreaMonitorSource
@@ -228,7 +229,7 @@ popd
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/libQt6Positioning.so.6
-/usr/lib64/libQt6Positioning.so.6.5.3
+/usr/lib64/libQt6Positioning.so.6.6.0
 /usr/lib64/qt6/plugins/position/libqtposition_geoclue2.so
 /usr/lib64/qt6/plugins/position/libqtposition_nmea.so
 /usr/lib64/qt6/plugins/position/libqtposition_positionpoll.so
@@ -236,6 +237,7 @@ popd
 %files license
 %defattr(0644,root,root,0755)
 /usr/share/package-licenses/qt6positioning/23b6196e1135fe02b4deb0607b016ff725275c79
+/usr/share/package-licenses/qt6positioning/2b8b815229aa8a61e483fb4ba0588b8b6c491890
 /usr/share/package-licenses/qt6positioning/3c4a0cf53278b001dd25ca8dea8d543fc0374181
 /usr/share/package-licenses/qt6positioning/4cc77b90af91e615a64ae04893fdffa7939db84c
 /usr/share/package-licenses/qt6positioning/69d5aab915ac11e2d4afbdbf664824e654b7ae93
