@@ -7,7 +7,7 @@
 #
 Name     : qt6positioning
 Version  : 6.6.1
-Release  : 4
+Release  : 5
 URL      : https://download.qt.io/official_releases/qt/6.6/6.6.1/submodules/qtpositioning-everywhere-src-6.6.1.tar.xz
 Source0  : https://download.qt.io/official_releases/qt/6.6/6.6.1/submodules/qtpositioning-everywhere-src-6.6.1.tar.xz
 Summary  : No detailed summary available
@@ -66,7 +66,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1703008098
+export SOURCE_DATE_EPOCH=1703022111
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -102,7 +102,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1703008098
+export SOURCE_DATE_EPOCH=1703022111
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/qt6positioning
 cp %{_builddir}/qtpositioning-everywhere-src-%{version}/LICENSES/Apache-2.0.txt %{buildroot}/usr/share/package-licenses/qt6positioning/2b8b815229aa8a61e483fb4ba0588b8b6c491890 || :
