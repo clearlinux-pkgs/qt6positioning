@@ -10,8 +10,8 @@ libQt6Positioning.so.6:QDoubleMatrix4x4::scale(double)@@Qt_6_PRIVATE_API
 libQt6Positioning.so.6:QDoubleVector2D::normalize()@@Qt_6_PRIVATE_API
 libQt6Positioning.so.6:QDoubleVector3D::normalize()@@Qt_6_PRIVATE_API
 libQt6Positioning.so.6:QExplicitlySharedDataPointer<QGeoAreaMonitorInfoPrivate>::~QExplicitlySharedDataPointer()@@Qt_6
-libQt6Positioning.so.6:QExplicitlySharedDataPointer<QGeoPositionInfoPrivate>::~QExplicitlySharedDataPointer()@@Qt_6_PRIVATE_API
-libQt6Positioning.so.6:QExplicitlySharedDataPointer<QGeoSatelliteInfoPrivate>::~QExplicitlySharedDataPointer()@@Qt_6_PRIVATE_API
+libQt6Positioning.so.6:QExplicitlySharedDataPointer<QGeoPositionInfoPrivate>::~QExplicitlySharedDataPointer()@@Qt_6
+libQt6Positioning.so.6:QExplicitlySharedDataPointer<QGeoSatelliteInfoPrivate>::~QExplicitlySharedDataPointer()@@Qt_6
 libQt6Positioning.so.6:QGeoAddress::QGeoAddress()@@Qt_6
 libQt6Positioning.so.6:QGeoAddress::clear()@@Qt_6
 libQt6Positioning.so.6:QGeoAddress::~QGeoAddress()@@Qt_6
@@ -126,8 +126,8 @@ libQt6Positioning.so.6:QNmeaSatelliteInfoSource::setUpdateInterval(int)@@Qt_6
 libQt6Positioning.so.6:QNmeaSatelliteInfoSource::startUpdates()@@Qt_6
 libQt6Positioning.so.6:QNmeaSatelliteInfoSource::stopUpdates()@@Qt_6
 libQt6Positioning.so.6:QNmeaSatelliteInfoSource::~QNmeaSatelliteInfoSource()@@Qt_6
-libQt6Positioning.so.6:QSharedDataPointer<QGeoAddressPrivate>::~QSharedDataPointer()@@Qt_6_PRIVATE_API
-libQt6Positioning.so.6:QSharedDataPointer<QGeoCoordinatePrivate>::~QSharedDataPointer()@@Qt_6_PRIVATE_API
-libQt6Positioning.so.6:QSharedDataPointer<QGeoLocationPrivate>::~QSharedDataPointer()@@Qt_6_PRIVATE_API
+libQt6Positioning.so.6:QSharedDataPointer<QGeoAddressPrivate>::~QSharedDataPointer()@@Qt_6
+libQt6Positioning.so.6:QSharedDataPointer<QGeoCoordinatePrivate>::~QSharedDataPointer()@@Qt_6
+libQt6Positioning.so.6:QSharedDataPointer<QGeoLocationPrivate>::~QSharedDataPointer()@@Qt_6
 libQt6Positioning.so.6:Qt_6
 libQt6Positioning.so.6:Qt_6_PRIVATE_API
